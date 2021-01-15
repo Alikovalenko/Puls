@@ -9,8 +9,12 @@ gulp.task('server', function() {
 
     browserSync({
         server: {
-            baseDir: "src"
-        }
+            ui: {
+                port: 5500,
+                
+            baseDir: "src" 
+        }},
+        browser: 'chrome'
     });
 
     gulp.watch("src/*.html").on('change', browserSync.reload);
@@ -28,6 +32,7 @@ gulp.task('styles', function() {
 
 gulp.task('watch', function() {
     gulp.watch("src/sass/**/*.+(scss|sass)", gulp.parallel('styles'));
+    gulp.watch("src/*.html").on("change", browserSync.reload);
 })
 
 gulp.task('default', gulp.parallel('watch', 'server', 'styles'));

@@ -1,0 +1,10 @@
+.consultation{
+    min-height: 680px;
+    background: url('../img/bg/bg2.jpg') center (center / cover) no-repeat;
+    &__desc{
+            font-size: 20px;
+            font-weight: 500;
+            text-align: left;
+            color: #ffffff; 
+    }
+}
