@@ -1,0 +1,41 @@
+.coments{
+    &__customer{
+        align-items: center;
+        width: 881px;
+        min-height: 170px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 102px;
+    }
+        &-des{
+            margin-left: 62px;
+            width: 650px;
+            min-height: 188px;
+            
+            &_name{
+                margin-bottom: 10px;
+                font-size: 18px;
+                font-weight: 700;
+                text-align: left;
+                color: #0d0d0d;
+            }
+            &_achievements{
+                margin-bottom: 19px;
+                font-size: 14px;
+                font-weight: 300;
+                text-align: left;
+                color: #646464;
+            }
+            &_coment{
+                font-size: 16px;
+                font-weight: 300;
+                text-align: left;
+                color: #0d0d0d;
+            }
+    }
+    .icon{
+        width: 162px;
+       
+    }
+
+}

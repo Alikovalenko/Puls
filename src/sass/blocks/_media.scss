@@ -36,8 +36,9 @@
             font-size: 12px;
         }
         &__icons{
+            margin: 0 auto;
             margin-top: 66px;
-            width:100%;
+            width:80%;
         }
         &__icon{
             width: 100px;
@@ -68,6 +69,11 @@
                 width: 200px;
                 font-size: 14px;
             }
+        }
+        .title{
+            margin-top: 30px;
+            font-size: 24px;
+            margin-bottom: 5px;
         }
     .advantages{
             h2{
@@ -115,10 +121,107 @@
             }
           }
           .feed-form{
+            margin: 0 auto;
             input{
                    width: 160px;
                    margin: 0 auto;
                    margin-top: 20px;
             }
            }
+    .carousel{
+            padding: 51px 0 ;
+            &__inner{
+              img{ 
+                  width: 100%;
+              }
+            }
+        }
+
+    .catalog{
+        padding-bottom: 20px;
+        &__tab{
+            font-size: 11px;     
+    }
+    &__content{
+        margin-top: 30px;
+    }
+    &-item{
+        margin: 0 auto;
+        margin-top: 20px;
+        padding: 10px 9px 13px 10px;
+        &__subtitle{
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        &__descr{
+            margin: 0 auto;
+            width: 200px;
+            margin-top: 5px;
+            font-size: 11px;  
+        }
+        &__link{
+            margin-top: 15px;
+            font-size: 12px;
+        }
+        &__footer{
+            width: 80%;
+            margin: 0 auto;
+          }
+        &__old-price{
+                font-size: 12px;
+        }
+        &__price{
+            font-size: 16px;
+        }
+    }
+    }
+    .coments{
+        &__customer{
+            align-items: center;
+            width: 321px;
+            margin-bottom: 30px;
+        }
+            &-des{
+                margin: 0 auto;
+                width: 300px;
+                &_name{
+                    margin-bottom: 5px;
+                    font-size: 14px;
+                    text-align: center;
+                }
+                &_achievements{
+                    margin-bottom: 10px;
+                    font-size: 12px;
+                    text-align: center;
+                }
+                &_coment{
+                    font-size: 11px;
+                    text-align: justify;
+                }
+        }
+        .icon{
+            margin: 0 auto;
+            width: 122px;  
+        }
+    }
+    .footer{
+        height: 530px;
+     &__info{
+         padding: 25px 30px 30px;
+         width: 320px;
+         height: 188px;
+     }
+     iframe{
+         height: 530px;
+     }
+     &__addr{
+        width: 250px;
+        margin: 0px 0 16px;
+        font-size: 14px;
+     }
+     &__phone{
+        font-size: 16px;
+        margin-bottom: 18px;   
+     }
+    }
 }
