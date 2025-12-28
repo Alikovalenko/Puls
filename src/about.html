@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- СТРАНИЦА "ПРО НАС" НА УКРАИНСКОМ-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name ="description" content="this is website Make company">
+    <meta name ="author" content ="Kovalenko Albert">
+    <title>Make</title>
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/tiny-slider.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="shortcut icon" href=icons/MainMake.png />
+</head>
+<div class="overlay" id="ov">
+    <div class="modal">
+        <div class="modal_close" onclick="Closeln()" >&times;</div>
+        <div class="modal_subtitle">language</div>
+        <div class="modal_desc">
+            <button class="UKR" onclick="UKR()">UKR</button>
+            <button class="ENG" onclick="ENG()">ENG</button>
+            <button class="DEU" onclick="DEU()">DEU</button>
+            <button class="RUS" onclick="RUS()">RUS</button>
+        </div>
+    </div>
+</div>
+<div class="search_site" id="srch_site">
+    <div class="modal_site">
+        <div class="modal_close_search" onclick="CloseSh()" >&times;</div>
+        <div class="modal_subtitle_search">Пошук</div>
+        <div class="modal_input">
+            <input class="search_s" type="search" id="searchIn" placeholder="Введіть" aria-label="Search">
+            <button class="Search_btn" onclick="Search_site_all()">Пошук</button>
+        </div>
+    </div>
+</div>
+<div class="basket_modal" id="bskt_mod">
+    <div class="modal_basket">
+        <div class="modal_close_basket" onclick="CloseBskt()" >&times;</div>
+        <div class="modal_subtitle_basket">Кошик</div>
+        <div class="clear_basket" onclick="clearBasket()">Очистити</div>
+        <div class="basket_desc" id="basket_desc">Замовте щось, бо кошик порожній</div>
+        <div class="modal_slots_basket">
+        </div>
+        <div class="buy_basket" onclick="buyBskt()">Купити</div>
+    </div>
+</div>
+<div class="client_modal" id="client_mod">
+    <div class="modal_client">
+        <div class="modal_close_client" onclick="Closeclient()">&times;</div>
+        <div class="modal_subtitle_client">Заповніть форму</div>
+        <div class="wapp_form">
+            <form id="clientForm" method="POST" action="send_email.php">
+                <input class="client_name" name="client_name" type="text" placeholder="Прізвище, ім'я" required>
+                <input class="client_phone" name="client_phone" type="text" placeholder="Телефон" required>
+                <textarea class="client_mail" name="client_mail" placeholder="Поштовий індекс, адреса та номер поштового відділення" required></textarea>
+                <!-- Скрытое поле для данных из localStorage -->
+                <input type="hidden" id="basketData" name="basketData">
+            </form>
+            <div class="client_desc">Для проведення покупки заповніть форму та натисніть "Надіслати", наш працівник протягом дня з вами зв'яжиться. Заповнюючи форму, ви погоджуєтесь з <a href="user.html">політикою конфіденційності</a>, яка діє на нашому сайті.</div>
+        </div>
+        <div class="send_Make" onclick="sendMake()">Надіслати</div>
+    </div>
+</div>
+<header>
+    <div class="container">
+    <section class="promo">
+        <div class="container_head">
+                <div class="logo_text" id="logo_ukr">Товари з любов'ю для нашої планети</div>
+        <div class="carusell">
+            <div class="Karpaty"><img class="karp" src="../img/bg/Karpaty.jpg" alt=""></div>
+            <div class="Sea2"><img class="sea2" src="../img/bg/SeaAzovskoe.jpg" alt=""></div>
+            <div class="Africa"><img class="afr" src="../img/bg/Africa.jpg" alt=""></div>
+            <div class="Sea"><img class="sea" src="../img/bg/SeaAzovskoe.jpg" alt=""></div>
+        </div>
+        <div class="blue_line"></div>
+    </div>   
+    </section>
+    <section class="nav_menu">
+        <div class="green_line" id="green_line">
+            <div class="container_menu">
+                <a href="index.html">  <div class="logotype"></div></a>
+            <div class="header_menu_all">
+            <div class="header_menu" id="menu_ukr">
+                <a href="index.html"> <div class="bags"><img src="icons/Bags.png" class="bags1" alt="bags"><a href="index.html" class="desc_link" id="desc_ukr">Сумки</a></div></a> 
+                <a href="index.html"><div class="decor1"><img src="icons/decoration.png" class="decor11" alt="decoration"><a href="index.html" class="desc_link" id="desc_link2">Прикраси</a></div></a>
+                <a href="index.html"><div class="toys1"><img src="icons/Toys.png" class="toys11" alt="toys"><a href="index.html" class="desc_link" id="desc_toys_ukr">Іграшки</a></div></a>
+                <a href="index.html"><div class="home1"><img src="icons/Home.png" class="home11" alt="home"><a href="index.html" class="desc_link" id="desc_home">Побут</a></div></a>
+                <a href="index.html"><div class="clothes1"><img src="icons/clothes.png" class="clothes11" alt="clothes"><a href="index.html" class="desc_link" id="clothes">Одяг</a></div></a>
+        </div>
+        <nav class="navbar">
+            <form class="search_edit">
+              <input class="search" type="search" placeholder="Пошук" aria-label="Search" id="searchInput">
+            </form>
+          </nav>
+         <div class="language_block" onclick="Lang()">
+            <img src="icons/language.png" alt="language">
+            <p>Aあ</p>
+          </div>
+         
+          <div class="social" id="social">
+            <a href="https://www.instagram.com/" class="instagram">
+                <img src="icons/instagram.png" alt="instagram">
+            </a>
+            <a href="https://web.telegram.org/a/" class="telegram">
+                <img src="icons/telegram.png" alt="telegram">
+            </a>
+            <a href="https://www.facebook.com/" class="facebook">
+                <img src="icons/facebook.png" alt="facebook">
+            </a>
+          </div>
+          
+          <div class="text_marker_ab">
+            <p class="text_marker_style" id="marker">Про нас</p>
+          </div>
+          <div class="basket">
+            <a href="#"> <img src="icons/basket.png" alt="basket" onclick="basket_click()">   
+                 <div class="score_shop" onclick="basket_click()"><div class="number">0</div></div>
+                </a>        
+              <a class="basket_text" onclick="basket_click()" id="basket_ukr" href="#">Покупки</a>
+          </div>
+        </div>
+        </div>
+    </section>
+</div>
+<div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+</header>
+<body>
+    <div class="container">
+    <section class="section_body">
+        <div class="container_body2">
+            <div class="backgraund_img22" id="bg_ab">
+                <div class="slot_wapp2" >
+                    <div class="w1">
+                    <div class="slot1_wapper2">
+                        <div class="photo_contact1"></div>
+                        <div class="title2_slot1" id="about_ukr">Компанія, яка займається власною розробкою та продажем товарів. Наша продукція якісна,
+                            корисна і красива. В нас ви можете придбати товари ручної роботи для побуту, прикраси для себе та на подарунок
+                            для близьких вам людей і різні інші вироби. Наша компанія молода, їй всього лише 2 роки, але за цей час, наші
+                            покупці з вдячністю висловлюються про нас. Ми розпочали свій шлях у маленькому українському містечку під назвою 
+                            Жовті Води, і здобули собі гарне ім'я, тепер ми виготовляємо продукцію для всіх бажаючих, навіть по за межами 
+                            нашої країни. Ми щиро вдячні вам за вашу любов та підтримку.
+                            З любов'ю Адміністрація!
+                        </div>
+                    </div>  
+                </div>
+                    <div class="slot2_wapper2">
+                        <div class="photo2_wapper"></div>
+                        <div class="w2">
+                        <div class="title_admin" id="about_ukr1">
+                            Коваленко Альберт
+                        </div>
+                            <div class="title2_slot" id="about_ukr2">30 років. ІТ-адміністратор, розробник та програмний інженер. 
+                                Займається розробкою та адмініструванням сайту нашої компанії.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slot3_wapper2">
+                        <div class="photo3_wapper"></div>
+                        <div class="w2">
+                        <div class="title_admin" id="about_ukr3">
+                            Боченкова Наталія
+                        </div>
+                            <div class="title2_slot" id="about_ukr4">31 рік. Художник, криативний дизайнер продукції "Маке", адміністратор
+                                сторінок на facebook та instagram.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slot4_wapper2">
+                        <div class="photo4_wapper"></div>
+                        <div class="w2">
+                        <div class="title_admin" id="about_ukr5">
+                            Боченков Олександр
+                        </div>
+                            <div class="title2_slot" id="about_ukr6">30 років. Помічник у виробництві та продажі товарів.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slot5_wapper2">
+                        <div class="photo5_wapper"></div>
+                        <div class="w2">
+                        <div class="title_admin" id="about_ukr7">
+                            Коваленко Тетяна
+                        </div>
+                            <div class="title2_slot" id="about_ukr8">55 років. Засновник компанії. Художник, креативний дизайнер, майстер
+                                з розробки, крою та пошиву продукції "Маке". Займається створенням
+                                та продажем продукції, а також адмініструванням підприємства.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>      
+        </div>
+    </section>
+</div>
+</body>
+<div class="container">
+<div class="footer">
+    <section class="section_footer">
+        <div class="footer_container">
+       <div class="text_column1">   
+        <ul class="link_site">
+        <a href="news.html" class="site_link1" id="slink1UA">Новини</a></li>
+        <a href="#" class="site_link2" id="slink2UA">Про нас</a></li>
+        <a href="advertising.html" class="site_link3" id="slink3UA">Реклама</a></li>
+        <a href="user.html" class="site_link4" id="slink4UA">Угода користувача</a></li>
+    </div>
+       <div class="text_column2">
+        <ul class="link_site2">
+            <a href="wholesale.html" class="site_link5" id="slink5UA">Зробити оптове замовлення</a></li>
+            <a href="contact.html" class="site_link6" id="slink6UA">Зв'язатися з нами</a></li>
+            <a href="review.html" class="site_link7" id="slink7UA">Написати відгук</a></li>
+            <a href="#" class="site_link8" id="slink8UA" onclick="Search_all()">Знайти на сайті</a></li>
+       </div>
+       <div class="text_column3">
+        <ul class="link_site3">
+            <a href="guide.html" class="site_link9" id="slink9UA">Гід по сайту</a></li>
+       </div>
+    </div>
+    </section>
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+<script src="js/about.js"></script>
+</html>
